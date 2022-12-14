@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Trunfo - Street Fighter</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
@@ -15,40 +16,52 @@
         <section>
             <div class="placar">
                 <h2>Placar</h2>
-                <label for="iname"></label>
-                <input type="text" name="name" id="iname" placeholder="Insira o nome do jogador">
-                <button type="submit">Adicionar Jogador</button>
+                <input type="text" name="name" id="iname" placeholder="Insira o nome do jogador" autocomplete="off" required>
+                <button type="submit" class="btn-add">Adicionar</button>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Vitórias</th>
-                        <th>Empates</th>
-                        <th>Derrotas</th>
-                        <th>Pontos</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="tabela-placar">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Vitórias</th>
+                            <th>Empates</th>
+                            <th>Derrotas</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-jogadores"></tbody>
+                </table>
+            </div>
         </section>
 
-        <section>  
-            <h2></h2>
-            <button type="submit">Sortear Carta</button>
+        <div class="divisao"></div>
+
+        <section class="jogo">  
+            <h2>Vamos Jogar!</h2>
+            <button type="submit" class="sortear" >Sortear Carta</button>
             <div class="carta-frame">
-                <img src="img/carta.png" alt="">
-                <img src="img/carta.png" alt="">
+                <h3>Carta do Jogador</h3>
+                <!-- <h4>Escolha seu atributo</h4> -->
+                <img src="img/carta.png" alt="Moldura da carta">
+                
+                <h3>Carta da Máquina</h3>
+                <img src="img/carta.png" alt="Moldura da carta">
             </div>
 
-            <button type="submit" id="btn-jogar">Jogar</button>
-            <button type="submit" id="btn-jogar-novamente">Jogar Novamente</button>
+            <div class="botoes-jogar">
+                <button type="submit" id="btn-jogar" class="play">Jogar</button>
+                <button type="submit" id="btn-jogar-novamente" class="play">Jogar Novamente</button>
+            </div>
         </section>
-
 
     </main>
 
-    <script src="main.js"></script>
+    <footer>
+        <p><em>Site criado por <a href="https://github.com/nataliegcabral" target="_blank">Natalie Cabral</a></em></p>
+    </footer>
+
+    <script src="app/main.js"></script>
 
 </body>
 </html>
