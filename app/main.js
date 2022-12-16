@@ -4,7 +4,7 @@ let personagens = []
 const personagensAPI = 'https://nataliegcabral.github.io/personagens/lista.json'
 const sortear = document.querySelector('.sortear')
 
-//SENDO FEITO:
+//-------------------------SENDO FEITO:
 //sortear carta
 
 buscarPersonagens()
@@ -13,15 +13,15 @@ async function buscarPersonagens() {
     const res = await fetch(personagensAPI)
     personagens = await res.json()
     
-    
-    sortear.addEventListener('click', () => {
-        return parseInt(Math.random() * personagens.length)
-    }) 
-
-    console.log()
-
 };
-//conserta isso ai pelo amor de deus
+
+sortear.addEventListener('click', sortearCarta)
+
+function sortearCarta() {
+    return parseInt(Math.random() * personagens.length)
+}
+
+console.log(sortearCarta())
 
 
 let maquina = {
@@ -34,22 +34,15 @@ let maquina = {
 
 
 
-
-
-
-
-
-
-
-
-//A FAZER:
+//----------------------A FAZER:
 //exibir opções
 //obter atributo
 //jogar
 //exibir carta jogador
 //exibir carta maquina
 
-//PRONTOS:
+
+//----------------------PRONTOS:
 //adicionar jogador FEITO
 
 //jogar novamente FEITO

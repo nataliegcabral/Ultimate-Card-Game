@@ -2,8 +2,11 @@ const placar = document.querySelector('.placar')
 const adicionar = document.querySelector('#btn-add')
 const tabela = document.querySelector('#tabela-jogadores')
 
+
 adicionar.addEventListener('click', () => {
+    
     const nomeJogador = document.querySelector('#iname').value;
+
     jogadores.push({
         nome: nomeJogador,
         vitorias : 0,
@@ -11,14 +14,17 @@ adicionar.addEventListener('click', () => {
         derrotas: 0,
         pontos: 0
     });
-
-    nomeJogador.value = "";    
     
+    nomeJogador.value = ""; 
+
     if (nomeJogador.length != 0 && isNaN(nomeJogador) === true) {
         exibirJogadores(jogadores)
     } else {
         alert('[ERRO] O nome inserido é inválido.');
+       
     }
+
+    
 });
 
 let jogadores = [maquina];
@@ -26,6 +32,8 @@ let jogadores = [maquina];
 
 function exibirJogadores(listaJogadores) {
     tabela.innerHTML = '';
+    document.querySelector('#iname').value = "";
+
     listaJogadores.forEach(jogador => {
         tabela.innerHTML += `
         <tr>
@@ -37,4 +45,10 @@ function exibirJogadores(listaJogadores) {
         </tr>
         `
     })
+
 }
+
+// function calcularPontos(jogador, maquina) {
+//     let pontos = jogador.vitorias * 5 + jogador.empate;
+//     return pontos
+// }
