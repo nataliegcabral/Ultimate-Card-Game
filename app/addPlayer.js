@@ -14,7 +14,7 @@ adicionar.addEventListener('click', () => {
 
     nomeJogador.value = "";    
     
-    if (nomeJogador.length != 0) {
+    if (nomeJogador.length != 0 && isNaN(nomeJogador) === true) {
         exibirJogadores(jogadores)
     } else {
         alert('[ERRO] O nome inserido é inválido.');
