@@ -1,36 +1,50 @@
 // finn, jake, princesa jujuba, princesa caroço, marceline, rei gelado, bmo, princesa de fogo, prismo, dona tromba, canelinha
 
-let personagens = []
-const personagensAPI = 'https://nataliegcabral.github.io/personagens/lista.json'
-const sortear = document.querySelector('.sortear')
+//  let personagens = []
 
-//-------------------------SENDO FEITO:
-//sortear carta
+//  listaPersonagens()
 
-buscarPersonagens()
+//  async function listaPersonagens() {
+//      const conexao = await fetch('https://nataliegcabral.github.io/personagens/lista.json');
+//      const conexaoConvertida = await conexao.json()
 
-async function buscarPersonagens() {
-    const res = await fetch(personagensAPI)
-    personagens = await res.json()
-    
-};
+//      return conexaoConvertida;
+//  }
 
-sortear.addEventListener('click', sortearCarta)
+// // //-------------------------SENDO FEITO:
+// //sortear carta
+// let cartaJogador;
+// let cartaMaquina;
 
-function sortearCarta() {
-    return parseInt(Math.random() * personagens.length)
-}
+// const sortear = document.querySelector('.sortear')
+// sortear.addEventListener('click', sortearCarta)
 
-console.log(sortearCarta())
+// function sortearCarta() {
+//     let sorteioMaquina =  parseInt(Math.random() * personagens.length);
+//     cartaMaquina = personagens[sorteioMaquina];
+
+//     let sorteioJogador = parseInt(Math.random() * personagens.length);
+//     while (sorteioMaquina == sorteioJogador) {
+//         sorteioJogador = parseInt(Math.random() * personagens.length);
+//     }
+
+//     cartaJogador = personagens[sorteioJogador]
+
+//     exibirCartaJogador();
+// }
+
+// console.log(sortearCarta())
+
+// function exibirCartaJogador() {
+//     const exibirCartaJogador = document.querySelector('#carta-jogador');
+//     exibirCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`
+// }
 
 
-let maquina = {
-    nome: "Máquina",
-    vitorias: 0,
-    empates: 0,
-    derrotas: 0,
-    pontos: 0
-};
+
+
+
+
 
 
 
@@ -46,7 +60,7 @@ let maquina = {
 //adicionar jogador FEITO
 
 //jogar novamente FEITO
- const jogarNovamente = document.querySelector('#btn-jogar-novamente')
- jogarNovamente.addEventListener('click', () => {
-     window.location.reload()
- })
+//  const jogarNovamente = document.querySelector('#btn-jogar-novamente')
+//  jogarNovamente.addEventListener('click', () => {
+//      window.location.reload()
+//  })
