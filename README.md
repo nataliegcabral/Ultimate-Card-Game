@@ -1,2 +1,3 @@
-# Super-Trunfo
- Projeto de Super Trunfo feito no projeto Imersao Dev da Alura
+# Ultimate Card Game
+Simple Card Game that I made using my friends nicknames as Characters
+ 
