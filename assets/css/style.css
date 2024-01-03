@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+    --cor1: #439A97;
+    --cor2: #8ec276;
+    --cor3: #3a3755;
+    --cor5: #C792DF;
+    --cor6: #e0f5d7;
+    --fonte-padrao: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+}
+
+header {
+    background: var(--cor1) url("../img/background.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+
+header > h1 {
+    backdrop-filter: blur(10px);
+}
+
+body {
+    transition: all .3s;
+}
+
+button,
+.sort,
+.play  {
+    background-color: var(--cor2);
+}
+
+button:hover,
+.draw:hover,
+.play:hover,
+.draw:disabled,
+#btn-play-again:disabled,
+.play:disabled  {
+    background-color: #8ec276c2;
+}
+
+.sort:focus {
+    animation: bounceIn;
+    animation-duration: 1s;
+}
+
+.scoreboard {
+    outline: 2px solid var(--cor5);
+}
+
+footer {
+    background-color: var(--cor5);
+}
