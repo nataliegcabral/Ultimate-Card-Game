@@ -28,20 +28,20 @@ btnPlay.onclick = () => {
             if(playerAttributes[i].checked == true) {
 
                 let resContainer = document.querySelector('.result-container')
-                let res = document.createElement('span')
+                let res = document.createElement('div')
                 res.innerHTML = ''
-                resContainer.appendChild(res)  
+                resContainer.appendChild(res)
 
                 btnPlay.disabled = true
                 btnPlay.classList.toggle('disabled')
 
                 if(playerAttributes[i].value === machineAttributes[i].value) {
-                    res.innerHTML = `It's a draw!`
+                    res.innerHTML = `<span class="fs-2 fw-bold text-primary">It's a draw!</span>`
                 } else if (playerAttributes[i].value > machineAttributes[i].value) {
-                    res.innerHTML = `Player win!`
+                    res.innerHTML = `<span class="fs-2 fw-bold text-success">Player win!</span>`
                     console.log(playerAttributes[i].disabled)
                 } else if (playerAttributes[i].value < machineAttributes[i].value) {
-                    res.innerHTML = 'Machine win!'
+                    res.innerHTML = `<span class="fs-2 fw-bold text-danger">Machine win!</span>`
                 }
 
                 playAgain.disabled = false

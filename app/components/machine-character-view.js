@@ -25,9 +25,9 @@ export class MachineCharacterView {
                     <h5 class="card-title">${character.constructor.class} ${character.name}</h5>
 
                     <ul type="none" class="text-align-center p-0 fs-4.5">
-                        <li class="my-3 options-machine" id="atribute-machine1" value="${character.strenght}">Strenght</li>
-                        <li class="my-3 options-machine" id="atribute-machine2" value="${character.strenght}">Wisdom</li>
-                        <li class="my-3 options-machine" id="atribute-machine3" value="${character.strenght}">Magic</li>
+                        <li class="my-3 options-machine" id="atribute-machine1" value="${character.strenght}">Strenght <span style="visibility: hidden">${(character.strenght)}</span></li>
+                        <li class="my-3 options-machine" id="atribute-machine2" value="${character.wisdom}">Wisdom <span style="visibility: hidden">${character.wisdom}</span></li>
+                        <li class="my-3 options-machine" id="atribute-machine3" value="${character.magic}">Magic <span style="visibility: hidden">${character.magic}</span></li>
                     </ul>
                 </div>
         </div>

@@ -11,8 +11,6 @@ let players = [{
     delete: false
 }];
 
-//ADICIONANDO OS JOGADORES
-//Função para enviar jogador com o botao Enter
 inputScoreboard.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         add.click()
@@ -40,8 +38,6 @@ add.addEventListener('click', function() {
     document.querySelector('#floatingInput').value = "";
 })
 
-//FUNÇÃO DE EXIBIR OS JOGADORES NA TABELA - futuramente fazer interação com banco de dados
-
 const table = document.querySelector('#player-table');
 
 function showPlayers() {
@@ -57,7 +53,6 @@ function showPlayers() {
         `
         table.appendChild(playerTable)
 
-        //CRIANDO BOTAO DE DELETAR JOGADOR E ATRIBUINDO A FUNÇÃO
         if(player.delete === true) {
             const deleteButton = document.createElement('button')
             deleteButton.classList.add('btn-close')
