@@ -87,13 +87,31 @@
 
                 <h2 class="text-uppercase m-3 fs-1 fw-bold">scoreboard</h2>
 
+                <!-- MODAL -->
+                <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="form-floating m-3 d-flex adicionar-player">
+                            <input type="text" class="rounded-0 form-control" name="name" id="floatingInput" placeholder="">
+                            <label for="floatingInput">Player nickname</label>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="border-0 outline-0 rounded-end px-5 text-light" id="btn-add">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
                 <div class="form-floating m-3 d-flex adicionar-player">
                     <input type="text" class="rounded-0 form-control" name="name" id="floatingInput" placeholder="">
                     <label for="floatingInput">Player nickname</label>
-                    
-
-                    <button type="submit" class="border-0 outline-0 rounded-end px-5 text-light" id="btn-add">Add</button>
                 </div>
+                <!-- MODAL -->
 
                 <div class="player-table">
                     <table class="table table-striped">

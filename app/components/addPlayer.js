@@ -1,6 +1,7 @@
 const scoreboard = document.querySelector('.placar')
 const add = document.querySelector('#btn-add')
 const inputScoreboard = document.querySelector('#floatingInput')
+const playerModal = document.querySelector('#myModal')
 
 let players = [{
     name: "Machine",
@@ -10,6 +11,10 @@ let players = [{
     points: 0,
     delete: false
 }];
+
+playerModal.addEventListener('show.bs.modal', function() {
+    
+})
 
 inputScoreboard.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
