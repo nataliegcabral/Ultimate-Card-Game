@@ -15,13 +15,12 @@ const btnPlay = document.querySelector('#btn-play')
 const playAgain = document.querySelector('#btn-play-again')
 playAgain.disabled = true
 
-
-btnPlay.onclick = () => {
+btnPlay.onclick = (player, machine) => {
     
     const playerAttributes =  document.getElementsByName('options-player');
     const machineAttributes = document.getElementsByClassName('options-machine')
 
-    //assim que possível conseguir melhorar esse codigo pra verificar se qualquer uma das checkboxes não está checada, e dar um aviso para selecionar um, mas sem repetir no for
+
         for (let i = 0; i < playerAttributes.length; i++) {
             playerAttributes[i].disabled = true
 
@@ -37,11 +36,15 @@ btnPlay.onclick = () => {
 
                 if(playerAttributes[i].value === machineAttributes[i].value) {
                     res.innerHTML = `<span class="fs-2 fw-bold text-primary">It's a draw!</span>`
+                    
+                    players.draws += 1
+                    machine.draws += 1
                 } else if (playerAttributes[i].value > machineAttributes[i].value) {
                     res.innerHTML = `<span class="fs-2 fw-bold text-success">Player win!</span>`
-                    console.log(playerAttributes[i].disabled)
+                    players.draws += 1
                 } else if (playerAttributes[i].value < machineAttributes[i].value) {
                     res.innerHTML = `<span class="fs-2 fw-bold text-danger">Machine win!</span>`
+                    machine.draws += 1
                 }
 
                 playAgain.disabled = false
@@ -50,7 +53,7 @@ btnPlay.onclick = () => {
                 
         }        
 }
-
+console.log(machine.draws)
 playAgain.addEventListener('click', function() {
     location.reload(true)
 })

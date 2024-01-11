@@ -1,7 +1,6 @@
 const scoreboard = document.querySelector('.placar')
 const add = document.querySelector('#btn-add')
 const inputScoreboard = document.querySelector('#floatingInput')
-const playerModal = document.querySelector('#myModal')
 
 let players = [{
     name: "Machine",
@@ -12,9 +11,6 @@ let players = [{
     delete: false
 }];
 
-playerModal.addEventListener('show.bs.modal', function() {
-    
-})
 
 inputScoreboard.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
@@ -81,4 +77,8 @@ function showPlayers() {
 // function calcularPontos(jogador, maquina) {
 //     let pontos = jogador.vitorias * 5 + jogador.empate;
 //     return pontos
+// }
+
+// function score(player, machine) {
+
 // }
