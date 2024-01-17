@@ -22,12 +22,12 @@ export class MachineCharacterView {
         <div class="card m-4" style="width: 18rem;">
             <img src="assets/img/background.jpg" class="card-img-top" alt="...">
                 <div class="card-body fs-6">
-                    <h5 class="card-title">${character.constructor.class} ${character.name}</h5>
+                    <h5 class="card-title text-center">${character.constructor.class} ${character.name}</h5>
 
-                    <ul type="none" class="text-align-center p-0 fs-4.5">
-                        <li class="my-3 options-machine" id="atribute-machine1" value="${character.strenght}">Strenght <span style="visibility: hidden">${(character.strenght)}</span></li>
-                        <li class="my-3 options-machine" id="atribute-machine2" value="${character.wisdom}">Wisdom <span style="visibility: hidden">${character.wisdom}</span></li>
-                        <li class="my-3 options-machine" id="atribute-machine3" value="${character.magic}">Magic <span style="visibility: hidden">${character.magic}</span></li>
+                    <ul type="none" class="text-center fs-6 p-0">
+                        <li class="options-machine" id="atribute-machine1" value="${character.strenght}">Strenght <span class="li-span" style="visibility: hidden">${(character.strenght)}</span></li>
+                        <li class="options-machine" id="atribute-machine2" value="${character.wisdom}">Wisdom <span class="li-span" style="visibility: hidden">${character.wisdom}</span></li>
+                        <li class="options-machine" id="atribute-machine3" value="${character.magic}">Magic <span class="li-span" style="visibility: hidden">${character.magic}</span></li>
                     </ul>
                 </div>
         </div>

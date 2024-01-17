@@ -2,6 +2,7 @@ const scoreboard = document.querySelector('.placar')
 const add = document.querySelector('#btn-add')
 const inputScoreboard = document.querySelector('#floatingInput')
 
+
 let players = [{
     name: "Machine",
     wins: 0,
@@ -24,6 +25,7 @@ add.addEventListener('click', function() {
 
     if (playerName.length == 0, isNaN(playerName) === false) {
         alert("[ERROR] This name isn't available.");
+        
     } else {
         players.push({
             name: playerName,
@@ -33,9 +35,10 @@ add.addEventListener('click', function() {
             points: 0,
             delete: true
         });
-
+        
     }
     showPlayers();
+
     document.querySelector('#floatingInput').value = "";
 })
 
@@ -55,9 +58,10 @@ function showPlayers() {
         table.appendChild(playerTable)
 
         if(player.delete === true) {
-            const deleteButton = document.createElement('button')
-            deleteButton.classList.add('btn-close')
-            playerTable.appendChild(deleteButton)
+            const tdButton = document.createElement('td')
+            tdButton.innerHTML = `<button class="btn-close" id="button"></button>`
+            playerTable.appendChild(tdButton)
+            const deleteButton = document.getElementById('button')
 
             deleteButton.addEventListener('click', function() {
                 let indexPlayer = players.indexOf(player)
@@ -65,8 +69,13 @@ function showPlayers() {
                     playerTable.remove()
                     players.splice(indexPlayer, 1)
                     
+                    myModal.show();
                 }
             })
+        } else {
+            playerTable.innerHTML += `
+            <td></td>
+            `
         }
     })
 

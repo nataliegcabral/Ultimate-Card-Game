@@ -15,7 +15,7 @@ const btnPlay = document.querySelector('#btn-play')
 const playAgain = document.querySelector('#btn-play-again')
 playAgain.disabled = true
 
-btnPlay.onclick = (player, machine) => {
+btnPlay.onclick = () => {
     
     const playerAttributes =  document.getElementsByName('options-player');
     const machineAttributes = document.getElementsByClassName('options-machine')
@@ -47,13 +47,18 @@ btnPlay.onclick = (player, machine) => {
                     machine.draws += 1
                 }
 
-                playAgain.disabled = false
+                const spans = document.querySelectorAll('.li-span');
+                spans.forEach(span => {
+                    span.style.visibility = 'visible'
+                });
+
+                playAgain.disabled = false;
                 
             }
                 
         }        
 }
-console.log(machine.draws)
+
 playAgain.addEventListener('click', function() {
     location.reload(true)
 })
